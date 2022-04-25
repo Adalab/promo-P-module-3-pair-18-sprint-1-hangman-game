@@ -2,9 +2,14 @@ import '../styles/App.scss';
 import { useState } from 'react';
 
 function App() {
-  const [numberOfErrors, setnumberOfErrors] = useState (0);
-    setnumberOfErrors('0');
-  const [, set] = useState('');
+  const [numberOfErrors, setNumberOfErrors] = useState ("0");
+  
+  const onChange = (ev) => {
+    setNumberOfErrors(ev.target.value);
+    if (ev.target.value.length === 0) {
+      
+    }
+  };
   return (
     <div className="page">
     <header>
